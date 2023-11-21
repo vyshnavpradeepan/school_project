@@ -1,0 +1,407 @@
+<!--<style>-->
+<!--  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);-->
+<!--*:focus {-->
+<!--  outline: none;-->
+<!--}-->
+
+<!--body {-->
+<!--  margin: 0;-->
+<!--  padding: 0;-->
+<!--  background: #DDD;-->
+<!--  font-size: 16px;-->
+<!--  color: #222;-->
+<!--  font-family: 'Roboto', sans-serif;-->
+<!--  font-weight: 300;-->
+<!--}-->
+
+<!--#login-box {-->
+<!--  position: relative;-->
+<!--  margin: 5% auto;-->
+<!--  width: 600px;-->
+<!--  height: 400px;-->
+<!--  background: #FFF;-->
+<!--  border-radius: 2px;-->
+<!--  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);-->
+<!--}-->
+
+<!--.left {-->
+<!--  position: absolute;-->
+<!--  top: 0;-->
+<!--  left: 0;-->
+<!--  box-sizing: border-box;-->
+<!--  padding: 40px;-->
+<!--  width: 300px;-->
+<!--  height: 400px;-->
+<!--}-->
+
+<!--h1 {-->
+<!--  margin: 0 0 20px 0;-->
+<!--  font-weight: 300;-->
+<!--  font-size: 28px;-->
+<!--}-->
+
+<!--input[type="text"],-->
+<!--input[type="password"] {-->
+<!--  display: block;-->
+<!--  box-sizing: border-box;-->
+<!--  margin-bottom: 20px;-->
+<!--  padding: 4px;-->
+<!--  width: 220px;-->
+<!--  height: 32px;-->
+<!--  border: none;-->
+<!--  border-bottom: 1px solid #AAA;-->
+<!--  font-family: 'Roboto', sans-serif;-->
+<!--  font-weight: 400;-->
+<!--  font-size: 15px;-->
+<!--  transition: 0.2s ease;-->
+<!--}-->
+
+<!--input[type="text"]:focus,-->
+<!--input[type="password"]:focus {-->
+<!--  border-bottom: 2px solid #16a085;-->
+<!--  color: #16a085;-->
+<!--  transition: 0.2s ease;-->
+<!--}-->
+
+<!--input[type="submit"] {-->
+<!--  margin-top: 28px;-->
+<!--  width: 120px;-->
+<!--  height: 32px;-->
+<!--  background: #16a085;-->
+<!--  border: none;-->
+<!--  border-radius: 2px;-->
+<!--  color: #FFF;-->
+<!--  font-family: 'Roboto', sans-serif;-->
+<!--  font-weight: 500;-->
+<!--  text-transform: uppercase;-->
+<!--  transition: 0.1s ease;-->
+<!--  cursor: pointer;-->
+<!--}-->
+
+<!--input[type="submit"]:hover,-->
+<!--input[type="submit"]:focus {-->
+<!--  opacity: 0.8;-->
+<!--  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);-->
+<!--  transition: 0.1s ease;-->
+<!--}-->
+
+<!--input[type="submit"]:active {-->
+<!--  opacity: 1;-->
+<!--  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);-->
+<!--  transition: 0.1s ease;-->
+<!--}-->
+
+<!--.or {-->
+<!--  position: absolute;-->
+<!--  top: 180px;-->
+<!--  left: 280px;-->
+<!--  width: 40px;-->
+<!--  height: 40px;-->
+<!--  background: #DDD;-->
+<!--  border-radius: 50%;-->
+<!--  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);-->
+<!--  line-height: 40px;-->
+<!--  text-align: center;-->
+<!--}-->
+
+<!--.right {-->
+<!--  position: absolute;-->
+<!--  top: 0;-->
+<!--  right: 0;-->
+<!--  box-sizing: border-box;-->
+<!--  padding: 40px;-->
+<!--  width: 300px;-->
+<!--  height: 400px;-->
+<!--  background: url('https://goo.gl/YbktSj');-->
+<!--  background-size: cover;-->
+<!--  background-position: center;-->
+<!--  border-radius: 0 2px 2px 0;-->
+<!--}-->
+
+<!--.right .loginwith {-->
+<!--  display: block;-->
+<!--  margin-bottom: 40px;-->
+<!--  font-size: 28px;-->
+<!--  color: #FFF;-->
+<!--  text-align: center;-->
+<!--}-->
+
+<!--button.social-signin {-->
+<!--  margin-bottom: 20px;-->
+<!--  width: 220px;-->
+<!--  height: 36px;-->
+<!--  border: none;-->
+<!--  border-radius: 2px;-->
+<!--  color: #FFF;-->
+<!--  font-family: 'Roboto', sans-serif;-->
+<!--  font-weight: 500;-->
+<!--  transition: 0.2s ease;-->
+<!--  cursor: pointer;-->
+<!--}-->
+
+<!--button.social-signin:hover,-->
+<!--button.social-signin:focus {-->
+<!--  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);-->
+<!--  transition: 0.2s ease;-->
+<!--}-->
+
+<!--button.social-signin:active {-->
+<!--  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);-->
+<!--  transition: 0.2s ease;-->
+<!--}-->
+
+<!--button.social-signin.facebook {-->
+<!--  background: #32508E;-->
+<!--}-->
+
+<!--button.social-signin.twitter {-->
+<!--  background: #55ACEE;-->
+<!--}-->
+
+<!--button.social-signin.google {-->
+<!--  background: #DD4B39;-->
+<!--}-->
+<!--</style>-->
+<!--<div id="login-box">-->
+<!--  <div class="left">-->
+<!--    <h1>Sign up</h1>-->
+
+<!--    <input type="text" name="username" placeholder="Username" />-->
+<!--    <input type="text" name="email" placeholder="E-mail" />-->
+<!--    <input type="password" name="password" placeholder="Password" />-->
+<!--    <input type="password" name="password2" placeholder="Retype password" />-->
+<!--    <form action="" method="post">-->
+<!--      {% csrf_token %}-->
+<!--    <input type="submit" name="signup_submit" value="Sign me up" />-->
+<!--      </form>-->
+<!--  </div>-->
+
+<!--  <div class="right">-->
+<!--    <span class="loginwith">Sign in with<br />social network</span>-->
+
+<!--    <button class="social-signin facebook">Log in with facebook</button>-->
+<!--    <button class="social-signin twitter">Log in with Twitter</button>-->
+<!--    <button class="social-signin google">Log in with Google+</button>-->
+<!--  </div>-->
+<!--  <div class="or">OR</div>-->
+<!--</div>-->
+
+<!DOCTYPE html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(90deg, #C7C5F4, #776BCC)
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background:)
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(90deg, #C7C5F4, #776BCC)
+ }
+ form .button input:hover{
+  / transform: scale(0.99); /
+  background: linear-gradient(45deg,#328f8a,#08ac4b)
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+</style>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Registration Form</title>
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Register </div>
+    <div class="content">
+      <form action="{% url 'register' %}" method="post">
+          {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="fullname" placeholder="Enter your name">
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="username" placeholder="Enter your username">
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" placeholder="Enter your email">
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="number" placeholder="Enter your number">
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name="password" placeholder="Enter your password">
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" name="password1" placeholder="Confirm your password">
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            </label>
+          </div>
+        </div>
+        <div class="button">
+<input id="register-button" type="submit" name="register" value="Register">
+        </div>
+      </form>
+      {% for msg in messages %}
+{{msg}}
+{% endfor %}
+    </div>
+  </div>
+
+</body>
+</html>

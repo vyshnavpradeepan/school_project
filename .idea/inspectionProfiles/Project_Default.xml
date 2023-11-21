@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="LossyEncoding" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="object_oriented_programme.student.getdetails" />
+          <option value="object_oriented_programme.student.putdetails" />
+          <option value="travelproject.settings" />
+          <option value="django.contrib.auth.context_processors.auth.authenticate" />
+          <option value="ecommerceproject.shop.models.product.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
